@@ -25,4 +25,8 @@ public class Bil {
     public String getKjennemerke() {
         return kjennemerke;
     }
+
+    public void setHestekrefter(int hestekrefter) {
+        this.hestekrefter = hestekrefter;
+    }
 }
