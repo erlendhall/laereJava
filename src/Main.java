@@ -7,6 +7,11 @@ public class Main {
         Bil bil2 = new Bil();
 
         System.out.print(bil.getKjennemerke() + ", ");
-        System.out.println(bil.kjennemerke);
+        System.out.println(bil.getKjennemerke());
+        bil2.setFarge("rød");
+        bil2.setHestekrefter(750);
+        bil2.setKjennemerke("DL39230");
+        System.out.println(bil2.getKjennemerke() + ", " + bil2.getFarge());
+        System.out.println(bil2.toString());
     }
 }

@@ -29,4 +29,22 @@ public class Bil {
     public void setHestekrefter(int hestekrefter) {
         this.hestekrefter = hestekrefter;
     }
+
+    public void setFarge(String farge) {
+        String tall= "2";
+        int tall2 = 1;
+
+        this.farge = farge;
+    }
+
+    public String getFarge() {
+        return farge;
+    }
+
+    public int getHestekrefter() {
+        return hestekrefter;
+    }
+    public String toString() {
+        return "Kjennemerke: " + getKjennemerke() + "\n" + "Farge: " + getFarge() + "\n" + getHestekrefter();
+    }
 }
