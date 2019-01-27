@@ -3,8 +3,10 @@ import kjoretoy.Bil;
 public class Main {
 
     public static void main(String[] args) {
-        Bil bil = new Bil("EL12345", 500, "blå");
+        Bil bil = new Bil("EL12345", 500, "blå", "2000", "Volvo");
         Bil bil2 = new Bil();
+
+        bil.getVekt();
 
         System.out.print(bil.getKjennemerke() + ", ");
         System.out.println(bil.getKjennemerke());

@@ -1,17 +1,18 @@
 package kjoretoy;
 
-public class Bil {
+public class Bil extends Kjoretoy{
 
     private String kjennemerke;
     private int hestekrefter;
-    private String farge;
 
-    public Bil(String kjennemerke1,
-               int hestekrefter1,
-               String farge1) {
-        kjennemerke = kjennemerke1;
-        hestekrefter = hestekrefter1;
-        farge = farge1;
+    public Bil(String kjennemerke,
+               int hestekrefter,
+               String farge,
+               String vekt,
+               String merke) {
+        super(farge, vekt, merke);
+        this.kjennemerke = kjennemerke;
+        this.hestekrefter = hestekrefter;
     }
 
     public Bil() {
@@ -28,17 +29,6 @@ public class Bil {
 
     public void setHestekrefter(int hestekrefter) {
         this.hestekrefter = hestekrefter;
-    }
-
-    public void setFarge(String farge) {
-        String tall= "2";
-        int tall2 = 1;
-
-        this.farge = farge;
-    }
-
-    public String getFarge() {
-        return farge;
     }
 
     public int getHestekrefter() {
