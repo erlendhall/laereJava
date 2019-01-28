@@ -1,6 +1,6 @@
 package kjoretoy;
 
-public class Bil extends Kjoretoy{
+public class Bil extends Kjoretoy {
 
     private String kjennemerke;
     private int hestekrefter;
@@ -37,4 +37,51 @@ public class Bil extends Kjoretoy{
     public String toString() {
         return "Kjennemerke: " + getKjennemerke() + "\n" + "Farge: " + getFarge() + "\n" + getHestekrefter();
     }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static final class Builder {
+        private String farge;
+        private String vekt;
+        private String merke;
+        private String kjennemerke;
+        private int hestekrefter;
+
+        public Builder farge(String farge) {
+            this.farge = farge;
+            return this;
+        }
+
+        public Builder vekt(String vekt) {
+            this.vekt = vekt;
+            return this;
+        }
+
+        public Builder merke(String merke) {
+            this.merke = merke;
+            return this;
+        }
+
+        public Builder kjennemerke(String kjennemerke) {
+            this.kjennemerke = kjennemerke;
+            return this;
+        }
+
+        public Builder hestekrefter(int hestekrefter) {
+            this.hestekrefter = hestekrefter;
+            return this;
+        }
+
+        public Bil build() {
+            return new Bil(
+                    kjennemerke,
+                    hestekrefter,
+                    farge,
+                    vekt,
+                    merke
+            );
+        }
+     }
 }

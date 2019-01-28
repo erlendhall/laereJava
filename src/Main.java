@@ -5,15 +5,16 @@ public class Main {
     public static void main(String[] args) {
         Bil bil = new Bil("EL12345", 500, "blå", "2000", "Volvo");
         Bil bil2 = new Bil();
+        Bil bil3 = Bil.builder()
+                .kjennemerke("EL54321")
+                .hestekrefter(500)
+                .farge("rød")
+                .vekt("1500")
+                .merke("Ford")
+                .build();
 
-        bil.getVekt();
-
-        System.out.print(bil.getKjennemerke() + ", ");
-        System.out.println(bil.getKjennemerke());
-        bil2.setFarge("rød");
-        bil2.setHestekrefter(750);
-        bil2.setKjennemerke("DL39230");
-        System.out.println(bil2.getKjennemerke() + ", " + bil2.getFarge());
-        System.out.println(bil2.toString());
+        System.out.println(bil.toString() + "\n");
+        System.out.println(bil2.toString() + "\n");
+        System.out.println(bil3.toString());
     }
 }
